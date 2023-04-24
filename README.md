@@ -13,7 +13,7 @@ Hershey Vector Font (http://paulbourke.net/dataformats/hershey/)
  
  BHershey::write( buffer,  count, "Hello World" );
  
- results in a std::vector<float> buffer and a std::vector<int> count.  
+ results in a std::vector\<float\> buffer and a std::vector\<int\> count.  
  These can be rendered efficiently in OpenGL by:
  
  1) Write the buffer to OpenGL memory i.e
@@ -22,7 +22,7 @@ Hershey Vector Font (http://paulbourke.net/dataformats/hershey/)
     
  2) Extract the first index of each line strip
  
-     std::vector<int> first.resize(count.size());
+     std::vector\<int\> first.resize(count.size());
      int start = 0;
      for (int i = 0; i < first.size(); ++i) 
      { 
