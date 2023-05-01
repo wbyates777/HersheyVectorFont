@@ -22,13 +22,14 @@ Hershey Vector Font (http://paulbourke.net/dataformats/hershey/)
     
  2) Extract the first index of each line strip
  
-     std::vector\<int\> first.resize(count.size());
-     int start = 0;
-     for (int i = 0; i < first.size(); ++i) 
-     { 
-         first[i] = start;
-         start += count[i];
-     }
+     std::vector\<int\> first(count.size());  
+     int start = 0;   
+     for (int i = 0; i < first.size(); ++i)   
+     {  
+										    first[i] = start;  
+    					     start += count[i];  
+     } 
+     
  3) Then render using
  
      glMultiDrawArrays(GL_LINE_STRIP, &first[0], &count[0],  count.size());
