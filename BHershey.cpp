@@ -61,7 +61,7 @@
     
  2) Extract the first index of each line strip
  
-     std::vector<int> first.resize(count.size());
+     std::vector<int> first(count.size());
      int start = 0;
      for (int i = 0; i < first.size(); ++i) 
      { 
