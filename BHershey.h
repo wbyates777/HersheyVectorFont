@@ -61,7 +61,7 @@
     
  2) Extract the first index of each line strip
  
-     std::vector<int> first(count.size());
+     std::vector<int> first.resize(count.size());
      int start = 0;
      for (int i = 0; i < first.size(); ++i) 
      { 
@@ -113,35 +113,34 @@ private:
     // magic Hershey font scaling
     static const double SFONTSCALE;
     
-    // all Hershey codes (max height = 16);
-    static const std::vector<std::string> m_hershey_codes;
-    
-    static const std::vector<std::vector<short>> m_font;
-    
-    // fonts - ASCII mappings - index 0 -> ASCII 32 ('space')
-    // 96 characters per font
-    static const std::vector<short> m_roman_simplex;
-    static const std::vector<short> m_roman_duplex;
-    static const std::vector<short> m_roman_triplex;
-    static const std::vector<short> m_roman_plain;
-    static const std::vector<short> m_roman_complex;
-    static const std::vector<short> m_roman_complex_small;
+    // all 4000 Hershey codes (max height = 16);
+    static const char * const m_hershey_codes[4000];
+    static const short* m_font[18];
 
-    static const std::vector<short> m_greek_simplex;
-    static const std::vector<short> m_greek_plain;
-    static const std::vector<short> m_greek_complex;
-    static const std::vector<short> m_greek_complex_small;
-
-    static const std::vector<short> m_script_simplex;
-    static const std::vector<short> m_script_complex;
     
-    static const std::vector<short> m_italic_triplex;
-    static const std::vector<short> m_italic_complex;
-    static const std::vector<short> m_italic_complex_small;
+    // fonts - ASCII mappings - index 0 -> ASCII 32 ('space') - 96 characters per font
+    static const short m_roman_simplex[96];
+    static const short m_roman_duplex[96];
+    static const short m_roman_triplex[96];
+    static const short m_roman_plain[96];
+    static const short m_roman_complex[96];
+    static const short m_roman_complex_small[96];
 
-    static const std::vector<short> m_gothic_english_triplex;
-    static const std::vector<short> m_gothic_german_triplex;
-    static const std::vector<short> m_gothic_italian_triplex;
+    static const short m_greek_simplex[96];
+    static const short m_greek_plain[96];
+    static const short m_greek_complex[96];
+    static const short m_greek_complex_small[96];
+
+    static const short m_script_simplex[96];
+    static const short m_script_complex[96];
+    
+    static const short m_italic_triplex[96];
+    static const short m_italic_complex[96];
+    static const short m_italic_complex_small[96];
+
+    static const short m_gothic_english_triplex[96];
+    static const short m_gothic_german_triplex[96];
+    static const short m_gothic_italian_triplex[96];
 
 };
 
