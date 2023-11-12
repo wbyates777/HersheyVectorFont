@@ -115,7 +115,7 @@ private:
     
     // all 4000 Hershey codes (max height = 16);
     static const char * const m_hershey_codes[4000];
-    static const short* m_font[18];
+    static const short * const m_font[18];
 
     
     // fonts - ASCII mappings - index 0 -> ASCII 32 ('space') - 96 characters per font
