@@ -95,8 +95,8 @@ BHershey::dimensions( const std::string& str, float font_size, Font font )
     int width = 0;
     float max_height = 0.0;
     
-    const short* hersehy_font = m_font[font];
-    
+    const short * const hersehy_font = m_font[font];
+      
     for (unsigned char s : str) 
     {
         assert(s >= ' ' && s < ' ' + 96); // check valid character
@@ -142,8 +142,8 @@ BHershey::write( std::vector<float>& buffer, std::vector<int>& count,
     
     int index = 0;
     
-    const short* &hersehy_font = m_font[font];
-    
+    const short * const hersehy_font = m_font[font];
+     
     for (unsigned char s : str) 
     {
         assert(s >= ' ' && s < ' ' + 96); // check valid character
@@ -458,7 +458,7 @@ const short BHershey::m_gothic_italian_triplex[96]
 };
 
 
-const short* BHershey::m_font[18]
+const short * const BHershey::m_font[18]
 {
     m_roman_simplex,
     m_roman_duplex,
