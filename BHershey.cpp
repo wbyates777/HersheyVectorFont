@@ -82,7 +82,7 @@
 
 #include <cassert>
 
-const double BHershey::SFONTSCALE =   33.0;  // magic Hershey font scaling 
+constexpr double BHershey::SFONTSCALE =   33.0;  // magic Hershey font scaling 
 
 std::pair<float,float> 
 BHershey::dimensions( const std::string& str, float font_size, Font font )
@@ -203,7 +203,7 @@ BHershey::write( std::vector<float>& buffer, std::vector<int>& count,
 // Font Data - 96 characters per font
 //
 
-const short BHershey::m_roman_simplex[96]
+constexpr short BHershey::m_roman_simplex[96]
 {
     699,714,717,733,719,2271,734,731,721,722,
     2219,725,711,724,710,720,700,701,702,703,
@@ -217,7 +217,7 @@ const short BHershey::m_roman_simplex[96]
     626,2225,723,2226,2246,718
 };
 
-const short BHershey::m_roman_duplex[96]
+constexpr short BHershey::m_roman_duplex[96]
 {
     2699,2714,2728,2275,2719,2271,2718,2717,2721,2722,
     2723,2725,2711,2724,2710,2720,2700,2701,2702,2703,
@@ -231,7 +231,7 @@ const short BHershey::m_roman_duplex[96]
     2626,2225,2229,2226,2246,2729
 };
 
-const short BHershey::m_roman_triplex[96]
+constexpr short BHershey::m_roman_triplex[96]
 {
     3199,3214,3228,2275,3219,2271,3218,3217,3221,3222,
     3223,3225,3211,3224,3210,3220,3200,3201,3202,3203,
@@ -245,7 +245,7 @@ const short BHershey::m_roman_triplex[96]
     3126,2225,2229,2226,2246,3229
 };
 
-const short BHershey::m_roman_plain[96]
+constexpr short BHershey::m_roman_plain[96]
 {
     199,214,217,233,219,1271,234,231,221,222,
     1219,225,211,224,210,220,200,201,202,203,
@@ -259,7 +259,7 @@ const short BHershey::m_roman_plain[96]
     26,1225,223,1226,1246,218
 };
 
-const short BHershey::m_roman_complex[96]
+constexpr short BHershey::m_roman_complex[96]
 {
     2199,2214,2213,2275,2274,2271,2272,2251,2221,2222,
     2219,2232,2211,2231,2210,2220,2200,2201,2202,2203,
@@ -273,7 +273,7 @@ const short BHershey::m_roman_complex[96]
     2126,2225,2229,2226,2246,2218
 };
 
-const short BHershey::m_roman_complex_small[96]
+constexpr short BHershey::m_roman_complex_small[96]
 {
     1199,1214,1213,1275,1274,1271,1272,1251,1221,1222,
     1219,1232,1211,1231,1210,1220,1200,1201,1202,1203,
@@ -289,7 +289,7 @@ const short BHershey::m_roman_complex_small[96]
 
 
 
-const short BHershey::m_greek_simplex[96]
+constexpr short BHershey::m_greek_simplex[96]
 {
     699,714,717,733,719,2271,734,731,721,722,
     2219,725,711,724,710,720,700,701,702,703,
@@ -303,7 +303,7 @@ const short BHershey::m_greek_simplex[96]
     699,2225,723,2226,2246,718
 };
 
-const short BHershey::m_greek_plain[96]
+constexpr short BHershey::m_greek_plain[96]
 {
     199,214,217,233,219,1271,234,231,221,222,
     1219,225,211,224,210,220,200,201,202,203,
@@ -317,7 +317,7 @@ const short BHershey::m_greek_plain[96]
     199,1225,223,1226,1246,218
 };
 
-const short BHershey::m_greek_complex[96]
+constexpr short BHershey::m_greek_complex[96]
 {
     2199,2214,2213,2275,2274,2271,2272,2251,2221,2222,
     2219,2232,2211,2231,2210,2220,2200,2201,2202,2203,
@@ -331,7 +331,7 @@ const short BHershey::m_greek_complex[96]
     2199,2225,2229,2226,2246,2218
 };
 
-const short BHershey::m_greek_complex_small[96]
+constexpr short BHershey::m_greek_complex_small[96]
 {
     1199,1214,1213,1275,1274,1271,1272,1251,1221,1222,
     1219,1232,1211,1231,1210,1220,1200,1201,1202,1203,
@@ -345,7 +345,7 @@ const short BHershey::m_greek_complex_small[96]
     1199,1225,1229,1226,1246,1218,
 };
 
-const short BHershey::m_script_simplex[96]
+constexpr short BHershey::m_script_simplex[96]
 {
     699,2764,2778,733,2769,2271,2768,2767,2771,2772,
     2773,725,2761,724,710,2770,2750,2751,2752,2753,
@@ -359,7 +359,7 @@ const short BHershey::m_script_simplex[96]
     676,2225,723,2226,2246,718   
 };
 
-const short BHershey::m_script_complex[96]
+constexpr short BHershey::m_script_complex[96]
 {
     2749,2764,2778,2275,2769,2271,2768,2767,2771,2772,
     2773,2775,2761,2774,2760,2770,2750,2751,2752,2753,
@@ -373,7 +373,7 @@ const short BHershey::m_script_complex[96]
     2676,2225,2229,2226,2246,2779    
 };
 
-const short BHershey::m_italic_complex[96]
+constexpr short BHershey::m_italic_complex[96]
 {
     2749,2764,2778,2275,2769,2271,2768,2767,2771,2772,
     2773,2775,2761,2774,2760,2770,2750,2751,2752,2753,
@@ -387,7 +387,7 @@ const short BHershey::m_italic_complex[96]
     2176,2225,2229,2226,2246,2779   
 };
 
-const short BHershey::m_italic_complex_small[96]
+constexpr short BHershey::m_italic_complex_small[96]
 {
     1199,1214,1213,1275,1274,1271,1272,1251,1221,1222,
     1219,1232,1211,1231,1210,802,1200,1201,1202,1203,
@@ -401,7 +401,7 @@ const short BHershey::m_italic_complex_small[96]
     1176,1225,1229,1226,1246,1218    
 };
 
-const short BHershey::m_italic_triplex[96]
+constexpr short BHershey::m_italic_triplex[96]
 {
     3249,3264,3278,2275,3269,2271,3268,3267,3271,3272,
     3273,3275,3261,3274,3260,3270,3250,3251,3252,3253,
@@ -415,7 +415,7 @@ const short BHershey::m_italic_triplex[96]
     3176,2225,2229,2226,2246,3279   
 };
 
-const short BHershey::m_gothic_english_triplex[96]
+constexpr short BHershey::m_gothic_english_triplex[96]
 {
     3699,3714,3728,2275,3719,2271,3718,3717,3721,3722,
     3723,3725,3711,3724,3710,3720,3700,3701,3702,3703,
@@ -429,7 +429,7 @@ const short BHershey::m_gothic_english_triplex[96]
     3626,2225,2229,2226,2246,3729   
 };
 
-const short BHershey::m_gothic_german_triplex[96]
+constexpr short BHershey::m_gothic_german_triplex[96]
 {
     3699,3714,3728,2275,3719,2271,3718,3717,3721,3722,
     3723,3725,3711,3724,3710,3720,3700,3701,3702,3703,
@@ -443,7 +443,7 @@ const short BHershey::m_gothic_german_triplex[96]
     3426,2225,2229,2226,2246,3729    
 };
 
-const short BHershey::m_gothic_italian_triplex[96]
+constexpr short BHershey::m_gothic_italian_triplex[96]
 {
     3699,3714,3728,2275,3719,2271,3718,3717,3721,3722,
     3723,3725,3711,3724,3710,3720,3700,3701,3702,3703,
@@ -458,7 +458,7 @@ const short BHershey::m_gothic_italian_triplex[96]
 };
 
 
-const short * const BHershey::m_font[18]
+constexpr const short * const BHershey::m_font[18]
 {
     m_roman_simplex,
     m_roman_duplex,
@@ -490,7 +490,7 @@ const short * const BHershey::m_font[18]
 //
 
 //const std::vector<std::string> BHershey::m_hershey_codes
-const char * const BHershey::m_hershey_codes[4000]
+constexpr const char * const BHershey::m_hershey_codes[4000]
 {
     nullptr,
     R"(    1  9MWRMNV RRMVV RPSTS)",
